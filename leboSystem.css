@@ -1,0 +1,251 @@
+/* the * means "all elements" (a universal selector) apply those styles to all elements*/
+*{
+	padding: 0; 
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Media query we use @media to include a block of CSS properties only if a certain condition is true */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+/* Header styeles */
+.header {
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	border-radius: 0 0 85% 85% / 30%;
+}
+
+h1 {
+	font-family: 'Special Elite', cursive;
+	text-align: center;
+	color: white;
+	font-size: 80px;
+	text-shadow: 2px 2px 2px #333;
+							
+							
+	}
+h1:hover {
+	cursor: pointer;
+}
+.typewriter h1 {
+  color: #fff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.0s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+	
+h3.moto {
+	font-family: 'Pompiere', cursive;
+	font-size: 2vw;
+	margin-bottom: 30px;
+	color: white;
+	text-shadow: 2px 2px 2px #333;
+}
+
+/* Overlay of of the header using the linear-gradient */
+.overlay{
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+	background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+	/*background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%); */
+	
+}	
+	
+
+
+body {
+	height: 900px;
+}
+
+
+button.signup {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+
+button.signup:hover{
+	cursor: pointer;
+}
+
+
+
+/* Mixins */
+/* bg shortcodes */
+
+
+.bg-gradient2 span,
+.bg-gradient2:before {
+  background: #44ea76;
+  background: linear-gradient(to right, #44ea76 0%, #39fad7 80%, #39fad7 100%);
+}
+
+.bg-gradient3 span,
+.bg-gradient3:before {
+  background: #fa6c9f;
+  background: linear-gradient(to right, #fa6c9f 0%, #ffe140 80%, #ffe140 100%);
+}
+
+/* General */
+.wrapper {
+  margin: 5% auto;
+  text-align: center;
+
+}
+
+a {
+  text-decoration: none;
+  
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  
+}
+
+/* fancy Button */
+.fancy-button {
+  display: inline-block;
+  margin: 30px;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  
+  
+}
+.fancy-button:before {
+  content: '';
+  display: inline-block;
+  height: 40px;
+  position: absolute;
+  bottom: -5px;
+  left: 30px;
+  right: 30px;
+  z-index: -1;
+  border-radius: 30em;
+  -webkit-filter: blur(20px) brightness(0.95);
+          filter: blur(20px) brightness(0.95);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+  
+}
+.fancy-button i {
+  margin-top: -1px;
+  margin-right: 20px;
+  font-size: 1.265em;
+  vertical-align: middle;
+}
+.fancy-button span {
+  display: inline-block;
+  padding: 18px 60px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+.fancy-button:focus, .fancy-button:active {
+  color: #ffffff;
+}
+.fancy-button:hover {
+  color: #ffffff;
+}
+.fancy-button:hover span {
+  -webkit-filter: brightness(1.05) contrast(1.05);
+          filter: brightness(1.05) contrast(1.05);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.fancy-button:hover:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+}
+.fancy-button.pop-onhover:before {
+  opacity: 0;
+  bottom: 10px;
+}
+.fancy-button.pop-onhover:hover:before {
+  bottom: -7px;
+  opacity: 1;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+.fancy-button.pop-onhover:hover span {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+.fancy-button.pop-onhover:hover:active span {
+  -webkit-filter: brightness(1) contrast(1);
+          filter: brightness(1) contrast(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: all 0.15s ease-out;
+}
+.fancy-button.pop-onhover:hover:active:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+  transition: all 0.2s ease-out;
+}
+
+/* footer styles */
+.footer{
+			position: fixed;
+			font-family: sans-serif;
+			font-weight: 100;
+			bottom: 10px;
+			left: 0;
+			letter-spacing: 4px;
+			font-size: 10px;
+			width: 100vw;
+			text-align: center;
+			color: black;
+			text-transform: uppercase;
+			text-decoration: none;
+	}
+	
