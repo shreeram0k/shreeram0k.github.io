@@ -5,12 +5,7 @@
 	box-sizing: border-box;
 }
 
-/* Media query we use @media to include a block of CSS properties only if a certain condition is true */
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
-}
+
 /* Header styeles */
 .header {
 	text-align: center;
