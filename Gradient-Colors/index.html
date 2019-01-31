@@ -1,0 +1,65 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Grids</title>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div id="progress-bar"></div>
+      <h3 id="header" class="underlined underlined--gradient">Shreeram K</h3>
+		<a onclick="topFunction()" id="myBtn" title="Go to top">back to top</a>
+		  <div class="content">
+		    
+		    <div class="grid-container">
+					<div class="grid-item1 zoom"></div>
+					<div class="grid-item2 zoom"></div>
+					<div class="grid-item3 zoom"></div>
+					<div class="grid-item4 zoom"></div>
+					<div class="grid-item5 zoom"></div>
+					<div class="grid-item6 zoom"></div>
+					<div class="grid-item7 zoom"></div>
+					<div class="grid-item8 zoom"></div>
+					<div class="grid-item9 zoom"></div>
+					<div class="grid-item10 zoom"></div>
+					<div class="grid-item11 zoom"></div>
+					<div class="grid-item12 zoom"></div>
+					<div class="grid-item13 zoom"></div>
+					<div class="grid-item14 zoom"></div>
+					<div class="grid-item15 zoom"></div>
+					<div class="grid-item16 zoom"></div>
+					<div class="grid-item17 zoom"></div>
+					<div class="grid-item18 zoom"></div>
+					<div class="grid-item19 zoom"></div>
+					<div class="grid-item20 zoom"></div>
+
+
+			</div>
+		  </div>
+		  <!-- <iframe id="myFrame" src="D:\Myprojects\myTimer\index3.html" style="height:380px;width:50%"></iframe> -->
+	</div>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    document.getElementById("myBtn").style.display = "block";
+		  } else {
+		    document.getElementById("myBtn").style.display = "none";
+		  }
+		}
+
+		function topFunction() {
+		    document.body.scrollTop = 0; 
+		    document.documentElement.scrollTop = 0; 
+		}
+	</script>
+	<script>
+		let progressBar = document.querySelector("#progress-bar");
+		window.onload = function() {
+		  progressBar.style.display = 'none';
+		};
+	</script>
+</body>
+</html>
