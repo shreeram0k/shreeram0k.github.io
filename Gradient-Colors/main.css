@@ -272,7 +272,7 @@ body {
   transition: background .5s;
 }
 .underlined:hover {
-  background-size: 100% 100%;
+  background-size: 37% 100%;
 }
 .underlined--thin {
   background-image: linear-gradient(to right, black 0, black 100%);
@@ -297,7 +297,7 @@ body {
     display: none;
     position: fixed;
     bottom: 50px;
-    right: 30px;
+    right: 5px;
     z-index: 99;
     color: #333;
     padding: 8px;
@@ -370,4 +370,22 @@ body {
   background-size: 900% 900%;
 
   animation: rainbow 9s ease infinite;
+}
+
+.ch-topbar {
+    width: 100%;
+
+    border-bottom: solid 1px #E5E5E5;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    /*font-size: 0;*/
+}
+.ch-topbar .grid-lt {
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAMAAAAxmgQeAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAD5JREFUGNN1j9EKADAIAnP//9GjFq6w7iU4DNRsB06cb44TJ+UzYUcniqnqoA6ag/62JhjKIU0rxx1lKveuXJ5UAQs/G/2vAAAAAElFTkSuQmCC), auto;
+
+    /*position: static;*/
 }
