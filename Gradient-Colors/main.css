@@ -389,3 +389,143 @@ body {
 
     /*position: static;*/
 }
+
+.hexa1 {
+  display: none;
+  font-size: 10px;
+  margin-top: 95px;
+  margin-left: 75px;
+  padding: 5px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  border-spacing: inherit;
+}
+.hexa2 {
+  display: none;
+  font-size: 10px;
+  margin-top: -234px;
+  margin-left: -191px;
+  padding: 5px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+.grid-item1:hover .hexa1 {
+  display: block;
+}
+.grid-item1:hover .hexa2 {
+  display: block;
+}
+.grid-item2:hover .hexa1 {
+  display: block;
+}
+.grid-item2:hover .hexa2 {
+  display: block;
+}
+.grid-item3:hover .hexa1 {
+  display: block;
+}
+.grid-item3:hover .hexa2 {
+  display: block;
+}
+.grid-item4:hover .hexa1 {
+  display: block;
+}
+.grid-item4:hover .hexa2 {
+  display: block;
+}
+.grid-item5:hover .hexa1 {
+  display: block;
+}
+.grid-item5:hover .hexa2 {
+  display: block;
+}
+.grid-item6:hover .hexa1 {
+  display: block;
+}
+.grid-item6:hover .hexa2 {
+  display: block;
+}
+.grid-item7:hover .hexa1 {
+  display: block;
+}
+.grid-item7:hover .hexa2 {
+  display: block;
+}
+.grid-item8:hover .hexa1 {
+  display: block;
+}
+.grid-item8:hover .hexa2 {
+  display: block;
+}
+.grid-item9:hover .hexa1 {
+  display: block;
+}
+.grid-item9:hover .hexa2 {
+  display: block;
+}
+.grid-item10:hover .hexa1 {
+  display: block;
+}
+.grid-item10:hover .hexa2 {
+  display: block;
+}
+.grid-item11:hover .hexa1 {
+  display: block;
+}
+.grid-item11:hover .hexa2 {
+  display: block;
+}
+.grid-item12:hover .hexa1 {
+  display: block;
+}
+.grid-item12:hover .hexa2 {
+  display: block;
+}
+.grid-item13:hover .hexa1 {
+  display: block;
+}
+.grid-item13:hover .hexa2 {
+  display: block;
+}
+.grid-item14:hover .hexa1 {
+  display: block;
+}
+.grid-item14:hover .hexa2 {
+  display: block;
+}
+.grid-item15:hover .hexa1 {
+  display: block;
+}
+.grid-item15:hover .hexa2 {
+  display: block;
+}
+.grid-item16:hover .hexa1 {
+  display: block;
+}
+.grid-item16:hover .hexa2 {
+  display: block;
+}
+.grid-item17:hover .hexa1 {
+  display: block;
+}
+.grid-item17:hover .hexa2 {
+  display: block;
+}
+.grid-item18:hover .hexa1 {
+  display: block;
+}
+.grid-item18:hover .hexa2 {
+  display: block;
+}
+.grid-item19:hover .hexa1 {
+  display: block;
+}
+.grid-item19:hover .hexa2 {
+  display: block;
+}
+.grid-item20:hover .hexa1 {
+  display: block;
+}
+.grid-item20:hover .hexa2 {
+  display: block;
+}
