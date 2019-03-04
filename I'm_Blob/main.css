@@ -8,6 +8,8 @@ html {
 svg,
 svg circle {
   fill: #F0002F;
+  overflow: hidden;
+  vertical-align: middle;
 }
 @-webkit-keyframes from0to360 {
   from {
@@ -111,7 +113,7 @@ svg circle {
 h3 {
   color: white;
   padding-left: 10px;
-  font: bold 5vmax/.8 Open Sans, Impact;
+  font: bold 4.5vmax/.8 Open Sans, Impact;
 }
 
 
@@ -141,10 +143,19 @@ h3 {
     opacity: 1;
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+   #credits div {
+    font-size: 14px;
+    margin-left: -15px;
+    margin-bottom: -9px;
+  }
+}
+
 /* tooltip */
 .tooltip {
   position: relative;
-  background: #F0002F;
+  /*background: #F0002F;*/
   padding: 5px 12px;
   margin: 5px;
   font-size: 15px;
@@ -202,7 +213,4 @@ h3 {
   100% {
     transform: rotate(0deg);
   }
-}
-#anim:hover {
-  animation: shake 500ms ease-in-out forwards;
 }
