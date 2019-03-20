@@ -1,0 +1,123 @@
+* {
+  margin:0;
+}
+
+body {
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+/*  background-image: url(b12.png);
+  background-repeat: repeat;
+  background-position: -350px -45px;*/
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+/*    background-repeat: round;
+    background-position: 0px 0px;*/
+  }
+}
+#container {
+  /*background: #0052BA;*/
+  width:100%;
+  height: 100%;
+  text-align: center;
+  /*margin: 10px auto;*/
+  color: #112;
+  font-family: 'Viga', sans-serif;
+  overflow: hidden;
+  padding-top: 61px;
+  /*border-radius: 25px;*/
+}
+
+#buttons a{
+  display: inline-block;
+  width: 40%;
+  padding: 18px 5%;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-family: 'Comfortaa', cursive;
+}
+
+#buttons a{
+    background: none; 
+}
+
+#buttons a.active{
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  border-radius: 30px;
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+}
+
+#container h2{
+  margin: 0 auto;
+  font-size: 3em;
+  font-family: 'Sacramento', cursive;
+  padding-top: 30px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #container h2 {
+    font-size: 2em;
+  }
+}
+
+
+#container #info{
+  height: 200px;
+  width: 200px;
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+}
+
+#time{
+  padding-top: 18px;
+  display: block;
+  font-size: 5em;
+font-family: 'Quicksand', sans-serif;
+}
+
+html, body{
+  min-height: 100%;
+}
+
+.moto {
+  font-size: 1.5em;
+   font-family: 'Comfortaa', cursive;
+text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.heading {
+  font-size: 3em;
+   /*font-family: 'Comfortaa', cursive;*/
+   /*font-family: 'Abril Fatface', cursive;*/
+   font-family: 'Nunito', sans-serif;
+   font-weight: bold;
+   letter-spacing: 5px;
+    background: #8A2387;
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387); 
+  
+  -webkit-background-clip: text;
+  
+  color: transparent;
+}
+
+
+@media only screen and (max-width: 600px) {
+ .heading {
+  font-size: 2em;
+  letter-spacing: 3px;
+ }
+ .moto {
+  font-size: 1em;
+  padding-top: 8px;
+ }
+}
+
