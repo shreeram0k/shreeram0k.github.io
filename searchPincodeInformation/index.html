@@ -82,25 +82,6 @@
 
 
 <script>
-var obj, dbParam, xmlhttp, myObj, i, j, x, name, txt = "";
-obj = { "table":"customers", "limit":10 };
-dbParam = JSON.stringify(obj);
-// pincode = "571439";
-xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-  	myObj = JSON.parse(this.responseText);
-	  for (i in myObj.records) {
-	  x = "<h2>" + myObj.records[i].officename + "</h2>";
-	}
-
-
-    document.getElementById("demo").innerHTML = x;
-  }
-};
-xmlhttp.open("GET", "https://api.data.gov.in/resource/6176ee09-3d56-4a3b-8115-21841576b2f6?api-key=579b464db66ec23bdd000001766f0ab1a97447616d37f7a24aa16ae7&format=json&offset=0&limit=1&filters[pincode]=" + pincode, true);
-xmlhttp.send();
-
 function searchPincode() {
 	var obj, xmlhttp, myObj, i, j, name, txt = "";
 	var officeName, taluk, district, state;
