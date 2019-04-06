@@ -2,7 +2,7 @@
 <html lang="eng" class="no-js">
 <head>
 	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
 	<link rel="shortcut icon" href="img/logo.png">
 	<!-- Author Meta -->
@@ -30,7 +30,7 @@
 			<div id="container">
 				<div id="top" class="fullscreen align-items-center justify-content-center">
 					<span class="texture"></span>
-					<h1 id="spacepeople"></h1>
+					<h1 id="h1"></h1>
 				</div>
 			</div>
 			<div id="display">
@@ -43,55 +43,27 @@
 	
 	</div>
 		<script>
-			var myObj, numberOfPeople, name, craft;
+				fetch('http://api.open-notify.org/astros.json')
+				  .then(
+				    function(response) {
+				      if (response.status !== 200) {
+				        console.log('Looks like there was a problem. Status Code: ' +
+				          response.status);
+				        return;
+				      }
 
-		    xmlhttp = new XMLHttpRequest();
-			xmlhttp.onreadystatechange = function() {
-			  if (this.readyState == 4 && this.status == 200) {
-			  	myObj = JSON.parse(this.responseText);
-				numberOfPeople = myObj.number;
-				  for (i in myObj.people) {
-				  	name = myObj.people[i].name;
-				  	craft = myObj.people[i].craft;
-
-				  	var iDiv = document.createElement('div');
-					iDiv.id = 'display';
-					// iDiv.className = 'display';
-					document.getElementsByTagName('div')[0].appendChild(iDiv);
-
-
-					// Now create and append to iDiv
-					var innerDiv = document.createElement('div');
-					innerDiv.className = 'display';
-
-					// The variable iDiv is still good... Just append to it.
-					iDiv.appendChild(innerDiv);
-					innerDiv.innerHTML = "<div class='cell1' style='color: black;'>" + name;
-				}
-
-				document.getElementById("h1").style.opacity = "1";
-			    document.getElementById("h1").innerHTML = numberOfPeople;
-			  
-			  }
-			};
-			xmlhttp.open("GET", "http://api.open-notify.org/astros.json", true);
-			xmlhttp.send();
-		</script>
-		<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-		<script>
-			$.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
-			    var number = data['number'];
-			    $('#spacepeople').html(number);
-
-			    $('#spacepeople').css({'opacity': '1'});
-			    data['people'].forEach(function (d) {
-			         $('#astronames').append('<li>' + d['name'] + '</li>');
-			    });
-			});
-
+				      // Examine the text in the response
+				      response.json().then(function(data) {
+				        console.log(data.number);
+				        var number = data.number;
+				        document.getElementById("h1").innerHTML = number;
+				        document.getElementById("h1").style.opacity = "1";
+				      });
+				    }
+				  )
+				  .catch(function(err) {
+				    console.log('Fetch Error :-S', err);
+				  });
 		</script>
 		<script src="js/vendor/jquery-2.2.4.min.js"></script>
 		<script src="js/main.js"></script>
