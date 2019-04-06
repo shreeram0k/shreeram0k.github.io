@@ -30,7 +30,7 @@
 			<div id="container">
 				<div id="top" class="fullscreen align-items-center justify-content-center">
 					<span class="texture"></span>
-					<h1 id="h1"></h1>
+					<h1 id="spacepeople"></h1>
 				</div>
 			</div>
 			<div id="display">
@@ -76,6 +76,22 @@
 			};
 			xmlhttp.open("GET", "http://api.open-notify.org/astros.json", true);
 			xmlhttp.send();
+		</script>
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+		<script>
+			$.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
+			    var number = data['number'];
+			    $('#spacepeople').html(number);
+
+			    $('#spacepeople').css({'opacity': '1'});
+			    data['people'].forEach(function (d) {
+			         $('#astronames').append('<li>' + d['name'] + '</li>');
+			    });
+			});
+
 		</script>
 		<script src="js/vendor/jquery-2.2.4.min.js"></script>
 		<script src="js/main.js"></script>
