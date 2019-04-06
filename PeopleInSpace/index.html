@@ -82,7 +82,7 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 		<script>
-			$.getJSON('//api.open-notify.org/astros.json?callback=?', function(data) {
+			$.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
 			    var number = data['number'];
 			    $('#spacepeople').html(number);
 
