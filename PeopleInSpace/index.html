@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="eng" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/logo.png">
+	<!-- Author Meta -->
+	<meta name="Shreeram K" content="HowManyPeopleAreInSpaceRightNow">
+	<!-- Meta Description -->
+	<meta name="description" content="HowManyPeopleAreInSpaceRightNow">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="HowManyPeopleAreInSpaceRightNow">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>PeopleInSpace</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+	<div class="oz-body-wrap">
+		<section class="banner-area relative">
+			<div id="container">
+				<div id="top" class="fullscreen align-items-center justify-content-center">
+					<span class="texture"></span>
+					<h1 id="h1"></h1>
+				</div>
+			</div>
+			<div id="display">
+				<img class="object_rocket" src="img/rocket.svg" width="40px">
+				<div class="box_astronaut">
+					<img class="object_astronaut" src="img/astronaut.svg" width="140px">
+				</div>
+			</div>
+		</section>
+	
+	</div>
+		<script>
+			var myObj, numberOfPeople, name, craft;
+
+		    xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+			  if (this.readyState == 4 && this.status == 200) {
+			  	myObj = JSON.parse(this.responseText);
+				numberOfPeople = myObj.number;
+				  for (i in myObj.people) {
+				  	name = myObj.people[i].name;
+				  	craft = myObj.people[i].craft;
+
+				  	var iDiv = document.createElement('div');
+					iDiv.id = 'display';
+					// iDiv.className = 'display';
+					document.getElementsByTagName('div')[0].appendChild(iDiv);
+
+
+					// Now create and append to iDiv
+					var innerDiv = document.createElement('div');
+					innerDiv.className = 'display';
+
+					// The variable iDiv is still good... Just append to it.
+					iDiv.appendChild(innerDiv);
+					innerDiv.innerHTML = "<div class='cell1' style='color: black;'>" + name;
+				}
+
+				document.getElementById("h1").style.opacity = "1";
+			    document.getElementById("h1").innerHTML = numberOfPeople;
+			  
+			  }
+			};
+			xmlhttp.open("GET", "http://api.open-notify.org/astros.json", true);
+			xmlhttp.send();
+		</script>
+		<script src="js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
