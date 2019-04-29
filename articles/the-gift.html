@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Gift / SK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+   @charset "UTF-8";
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.5;
+  background: white;
+  color: #000000;
+}
+
+.wrapper {
+  padding: 5rem;
+  font-size: 1.4rem;
+  border: 1rem solid #f3ff00;
+}
+
+.navigation {
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+.navigation .logo {
+  display: inline-block;
+  color: #333;
+  margin-right: 1rem;
+}
+.navigation .logo-divider {
+  margin: 0 1rem;
+}
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.navigation li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.navigation:after {
+  clear: both;
+}
+
+.post-header {
+  padding: 0 0 1rem 0;
+  border-bottom: 2px solid #f3ff00;
+}
+
+.post-title, .post-meta {
+  display: inline-block;
+}
+
+.post-title {
+  font-weight: 700;
+}
+.post-title:after {
+  content: ' /';
+}
+
+.post-content {
+  margin-top: 3rem;
+}
+
+a {
+  color: #4848b9;
+  text-decoration: none;
+  background: linear-gradient(to top, rgba(50, 50, 130, 0.2) 0%, rgba(50, 50, 130, 0.2) 30%, transparent 31%, transparent 100%);
+}
+a:hover {
+  background: rgba(50, 50, 130, 0.2);
+}
+
+h1 {
+  font-size: 1.4rem;
+  display: inline;
+}
+
+
+@media screen and (max-width: 50rem) {
+  .wrapper {
+    padding: 2rem;
+  }
+}
+
+.letter p {
+  font-size: 17.6px;
+  text-align: start;
+  line-height: 27.2px;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+
+
+#loader {
+  background:#FFF;
+  left:50%;
+  position:absolute;
+  top:50%;
+  -webkit-transform:translateX(-50%) translateY(-50%);
+  -moz-transform:translateX(-50%) translateY(-50%);
+  -ms-transform:translateX(-50%) translateY(-50%);
+  transform:translateX(-50%) translateY(-50%);
+}
+
+#loader:before,
+#loader:after {
+  content:"";
+  background: #000;
+  box-shadow: 0px 6px 0px 0px #000,
+              0px 12px 0px 0px #000,
+              0px 18px 0px 0px #000,
+              0px 24px 0px 0px #000,
+              0px 30px 0px 0px #000;
+  height: 2px;
+  position: absolute;
+  top: 12px;
+  width: 60px;
+  z-index:0;
+}
+
+#loader:before {
+  left: 12px;
+}
+
+#loader:after {
+  right: 12px;
+}
+
+#loader #article {
+  border:2px solid #111;
+  height:100px;
+  perspective:600px;
+  -webkit-perspective-origin:left left;
+  -moz-perspective-origin:left left;
+  -ms-perspective-origin:left left;
+  perspective-origin:left left;
+  position:relative;
+  width:160px;
+}
+
+#loader #article:before {
+  background:#111;
+  content:'';
+  display:none;
+  height:100%;
+  left:-webkit-calc(50% - 0px);
+  left:-moz-calc(50% - 0px);
+  left:-ms-calc(50% - 0px);
+  left:calc(50% - 0px);
+  position:absolute;
+  top:0;
+  width:2px;
+}
+
+#loader #article #page {
+  -webkit-animation:turn_page 2s infinite;
+  -moz-animation:turn_page 2s infinite;
+  -ms-animation:turn_page 2s infinite;
+  animation:turn_page 2s infinite;
+  background:#FFF;
+  border:2px solid #111;
+  overflow: hidden;
+  height:100%;
+  left:50%;
+  backface-visibility: visible;
+  -webkit-perspective-origin:left left;
+  -moz-perspective-origin:left left;
+  -ms-perspective-origin:left left;
+  perspective-origin:left left;
+  position:absolute;
+  top:-2px;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  width:-webkit-calc(50% - 2px);
+  width:-moz-calc(50% - 2px);
+  width:-ms-calc(50% - 2px);
+  width:calc(50% - 2px);
+  -webkit-transform-origin:left;
+  -moz-transform-origin:left;
+  -ms-transform-origin:left;
+  transform-origin:left;
+  z-index:10;
+}
+
+#page:before {
+  content:"";
+  background: #000;
+  box-shadow: 0px 6px 0px 0px #000,
+              0px 12px 0px 0px #000,
+              0px 18px 0px 0px #000,
+              0px 24px 0px 0px #000,
+              0px 30px 0px 0px #000;
+  height: 2px;
+  margin: 0px 10px;
+  position: absolute;
+  top: 10px;
+  width: 60px;
+}
+
+@-webkit-keyframes turn_page {
+  0% { 
+    left:50%; 
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    -ms-transform:rotateY(0);
+    transform:rotateY(0);
+    -webkit-width:calc(50% - 2px);
+    -moz-width:calc(50% - 2px);
+    -ms-width:calc(50% - 2px);
+    width:calc(50% - 2px);
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,1);
+  }
+  100% { 
+    -webkit-left:calc(50% + 2px);
+    -moz-left:calc(50% + 2px);
+    -ms-left:calc(50% + 2px);
+    left:calc(50% + 2px);
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    -ms-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+    width:50%; 
+    box-shadow: 0px 1px 5px -1px transparent;
+  }
+}
+
+@keyframes turn_page {
+  0% { 
+    left:50%; 
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    -ms-transform:rotateY(0);
+    transform:rotateY(0);
+    -webkit-width:calc(50% - 2px);
+    -moz-width:calc(50% - 2px);
+    -ms-width:calc(50% - 2px);
+    width:calc(50% - 2px);
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,1);
+  }
+  100% { 
+    -webkit-left:calc(50% + 2px);
+    -moz-left:calc(50% + 2px);
+    -ms-left:calc(50% + 2px);
+    left:calc(50% + 2px);
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    -ms-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+    width:50%; 
+    box-shadow: 0px 1px 5px -1px transparent;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+.letter {
+    font-family: 'Roboto Mono', monospace;
+    /*-webkit-box-shadow: 0px 4px 20px -1px rgba(12, 12, 12, 0.51);
+    -moz-box-shadow: 0px 4px 20px -1px rgba(12, 12, 12, 0.51);
+    box-shadow: 0px 4px 20px -1px rgba(12, 12, 12, 0.51);*/
+    -ms-transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(0deg);
+    background: #fff;
+    padding: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+  
+}
+
+.letter-wrap {
+  border: 1rem solid #f3ff00;
+  border-radius: 3px;
+}
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id='loader'>
+<div id='article'>
+<div id='page'></div>
+</div>
+</div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <div class="c12 letter-wrap">
+  <div class="c7 centered letter">
+    <nav class="navigation">
+    <span class="logo"></span><!-- <span class="logo-divider">+</span> -->
+    <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="#">About</a></li>
+    <!-- <li><a href="#">Contact</a></li> -->
+    <li><a href="#">Blog</a></li>
+    </ul>
+    </nav>
+    <section class="post-header">
+    <div class="post-title"><h1>The Gift</h1></div>
+    <div class="post-meta">
+    by <span class="author">Shreeram K</span>
+    </div>
+    </section>
+    <section class="post-content">
+    <p>So he calls you a failure and says you gonna fail in life because,<br>
+      You failed his test's the zero’s on your test sheets, <br>sketched in,
+      Mockery of your face shape has become the definition of your reality.<br>
+      You are in doubt wandering if you had ever been good enough or
+      may be closer to the success of your siblings or
+      the neighbours son that the daddy always compares you with.<br>
+      Wait holdup you know what, Yes you are a fish,
+      You are fish trying to live on land
+      Stop whining and go back into water
+      You came from God the living water
+      he doesn’t make trash.<br>
+      Everyone is born with it can you imagine
+      someone is born with one without it.<br>
+      This is something we all have this is
+      something that will last
+      this is a gift given to us by god some
+      gifts are hardly put into,<br>
+      words some gifts are spoken some gifts
+      are heard I pray to God
+      for his Spoken word a gift is like a
+      kiss to the sun a candle in
+      the wind I give anything to know where
+      my gift begins,<br>
+      as life goes on it will dawn on me that
+      god will show and tell me that the Gift is YOU.</p>
+    </section>
+  </div>
+  </div>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>
