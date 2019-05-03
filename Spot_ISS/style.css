@@ -1,0 +1,96 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "spaceage", sans-serif;
+}
+
+@font-face {
+  font-family: spaceage;
+  src: url(fonts/spaceage.woff);
+}
+@font-face {
+  font-family: star;
+  src: url(fonts/star.woff);
+}
+@font-face {
+  font-family: exodar;
+  src: url(fonts/exodar.woff);
+}
+h1 {
+  font-family: "exodar", sans-serif;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+  /* max-width: 350px; */
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.leaflet-popup-content-wrapper {
+  font-size: 18px;
+}
+
+img.leaflet-marker-icon.fade {
+  /*opacity: 0.08;*/ 
+  /* make a mark use above */
+  opacity: 0;
+}
+
+.user-guide {
+  font-family: "spaceage", sans-serif;
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  padding: 10px;
+  width: 275px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  z-index: 1000;
+}
+
+/* @media only screen and (max-width: 475px) {
+  h1 {
+    max-width: 350px;
+  }
+} */
+
+@media only screen and (max-width: 620px) {
+  h1 {
+    max-width: 375px;
+  }
+}
+
+.leaflet-touch .leaflet-control-attribution, .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    opacity: 0.2;
+}
+.leaflet-popup-content-wrapper {
+    border-radius: 5px;
+    font-family: 'VT323', monospace;
+}
+
+@media only screen and (max-width: 1000px) {
+  .user-guide {
+    font-family: "spaceage", sans-serif;
+    position: absolute;
+    left: 2px;
+    bottom: 1px;
+    width: 275px;
+    width: 116px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+  } 
+  .leaflet-touch .leaflet-control-attribution, .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    width: 38%;
+  }
+}
