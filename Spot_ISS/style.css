@@ -67,6 +67,7 @@ img.leaflet-marker-icon.fade {
 @media only screen and (max-width: 620px) {
   h1 {
     max-width: 375px;
+    font-size: 1em;
   }
 }
 
