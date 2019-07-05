@@ -123,23 +123,14 @@ ol, ul {
 main ul li {
     margin-top: 10px;
     line-height: 1.4;
-    /* list-style-type: disc;
-    list-style-position: inside;
-    padding: 10px 0 10px 20px;
-    text-indent: -1em; */
-    /* indent for list */
 }
 
 li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
-main .star {
-    color: red;
-}
 
 .highlight {
-    /*background-color: var(--main-color);*/
     background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
     line-height: 23px;
     border-radius: 100px;
@@ -176,7 +167,7 @@ span a {
 #title-link:hover {
     color: #000;
     text-shadow: none;
-    cursor: url(hand.png),pointer !important;
+    cursor: url(images/hand.png),pointer !important;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
