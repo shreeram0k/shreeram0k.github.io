@@ -41,7 +41,8 @@
                 </span></h1>
             <p class="time" id="time">Wed, Jan 23, 6:00am</p>
             <img src="images/sun.svg" width="22" alt="sun" id="morning-img">
-            <img src="images/moon.svg" width="22" alt="moon" id="night-img">
+            <img src="images/eclipse.svg" width="22" alt="noon" id="noon-img">
+            <img src="images/night.svg" width="22" alt="moon" id="night-img">
             <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
         </section>
         <div class="quote">
@@ -157,8 +158,15 @@
             document.getElementById('night-img').style.opacity = 0;
         }
         else {
-            document.getElementById('night-img').style.opacity = 1;
             document.getElementById('morning-img').style.display = "none";
+            if (hour > 12 && hour < 18) {
+                document.getElementById('noon-img').style.opacity = 1;
+                document.getElementById('night-img').style.display = "none";
+            }
+            else {
+                document.getElementById('night-img').style.opacity = 1;
+                document.getElementById('noon-img').style.display = "none";
+            }
         }
 
     </script>
