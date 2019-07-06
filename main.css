@@ -204,3 +204,30 @@ span a {
         font-size: 4vw;
     }	
 }
+
+.div-leaves {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 3;
+    height: 80px;
+    max-height: 1200px;
+    background-image: url(images/leaves.png);
+    background-position: 50% 0;
+    background-size: 440px;
+    background-repeat: repeat-x;
+}
+
+.div-leaves.leavesf {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(180deg) rotateY(0) rotateZ(0);
+    transform: rotateX(180deg) rotateY(0) rotateZ(0);
+    -webkit-transform-style: preserve 3d;
+    transform-style: preserve-3d;
+}
