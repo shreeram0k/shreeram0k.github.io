@@ -39,6 +39,9 @@
                     <a id="title-link" style="background-color: transparent;" href="index.html">Shreeram K</a>
                 </span></h1>
             <p class="time" id="time">Wed, Jan 23, 6:00am</p>
+            <img src="images/sun.svg" width="22" alt="" id="morning-img">
+            <img src="images/moon.svg" width="22" alt="" id="night-img">
+            <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
         </section>
         <div class="quote">
             <h3>QUOTE</h3><br>
@@ -142,9 +145,21 @@
     </main>
 
     <script>
-        var d = Date(Date.now());
+//         var d = Date(Date.now());
+        var d = new Date()
         date = d.toString()
         document.getElementById('time').innerHTML = date.slice(0, 25);
+        
+        var hour = d.getHours()
+        if (hour <= 12) {
+            document.getElementById('morning-img').style.opacity = 1;
+            document.getElementById('night-img').style.opacity = 0;
+        }
+        else {
+            document.getElementById('night-img').style.opacity = 1;
+            document.getElementById('morning-img').style.display = "none";
+        }
+
     </script>
     <script>
         var percentage1 = 48;
