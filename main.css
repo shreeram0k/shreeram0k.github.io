@@ -168,7 +168,7 @@ span a {
     color: var(--main-color);
     /* text-shadow: none; */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    cursor: url(hand.png),pointer !important;
+    cursor: url(images/hand.png),pointer !important;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
