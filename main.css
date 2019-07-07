@@ -72,6 +72,10 @@ main p, main ul, main h2, main h1 {
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+	main p, main ul, main h2, main h1 { font-size: 1.4rem; }
+}
+
 h1, h2, h3, h4, h5, h6, p, span {
     font-size: inherit;
     margin: 0;
