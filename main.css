@@ -68,7 +68,8 @@ main p, main ul, main h2, main h1 {
     margin-top: 10px;
     line-height: 1.3em;
     font-size: 1.2rem;
-    color: #111;
+/*     color: #111; */
+    color: #111111ed;
     overflow: hidden;
 }
 
