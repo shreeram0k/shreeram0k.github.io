@@ -155,7 +155,8 @@
         var hour = d.getHours()
         if (hour <= 12) {
             document.getElementById('morning-img').style.opacity = 1;
-            document.getElementById('night-img').style.opacity = 0;
+            document.getElementById('noon-img').style.display = "none";
+            document.getElementById('night-img').style.display = "none";
         }
         else {
             document.getElementById('morning-img').style.display = "none";
