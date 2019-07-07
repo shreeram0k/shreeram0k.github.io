@@ -164,6 +164,7 @@ span a {
     font-size: 80px;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
+    letter-spacing: .04em;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
