@@ -1,11 +1,21 @@
+
 :root {
-	--primary-color: #5e4cff;
+    --primary-color: #5e4cff;
     --secondary-color: #9146ff;
     --delay: 0;
-	--duration: 800ms;
-	--iterations: 1;
+    --duration: 800ms;
+    --iterations: 1;
+    --font-1: Roobert-Regular, 'Montserrat', sans-serif;;
+    --font-2: Druk Wide Medium;;
 }
 
+* {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
@@ -13,180 +23,81 @@
     font-family: Druk Wide Medium;
     src: url(../fonts/Druk\ Wide\ Web\ Medium\ Regular.ttf);
 }
+
 @font-face {
     font-family: Roobert-Regular;
     src: url(../fonts/Roobert-Regular.ttf);
 }
+
 body{
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-1);
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
-	color: #c4c3ca;
+	color: #f0f0ff;
 	background-color: #101010;
 	overflow-x: hidden;
 	-webkit-transition: all 300ms linear;
 	transition: all 300ms linear;
 }
-a {
-	cursor: pointer;
-}
-a:hover {
-	text-decoration: none;
-}
 
-.cd-header{
-    position: fixed;
-	width:100%;
-	top:0;
-	left:0;
-	z-index:100;
-} 
-.header-wrapper{
-    position: relative;
-	width: 100%;
-	margin-left: 50px;
-} 
-.logo-wrap {
-	position: absolute;
-	display:block;
-	left:0;
-	top: 74px;
-	cursor: pointer;
-}
-.logo-wrap a {
-	cursor: pointer;
-	font-size: 2vw;
-	line-height: 20px;
-	text-transform: uppercase;
-	letter-spacing: 0.124em;
-	color: #fff;
-    transition : all 0.3s ease-out;
-    opacity: 0.87;
-    font-family: Druk Wide Medium;
-}
-
-h1 {
-    font-size: 4em;
-    margin: .67em 0;
-    line-height: 6.5rem;
-}
-.hype-message {
-    margin-top: 0.3em; 
-    padding-left: 25px; 
-    font-size: 8vw; 
-    font-family: Roobert-Regular;
-    font-size: 16vw;
-    line-height: 100%;
-    letter-spacing: -.009em;
-}
-
-.section {
-    width: 100%;
-    display: block;
-    padding: 0.5em;
-}
-
-.motto {
-    margin-top: 8.8rem;
-    text-align: left;
+.sk-intro__header {
     color: var(--primary-color);
+    font-family: var(--font-1);
     font-size: 10vw;
-    cursor: pointer;
-    opacity: 0.85;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
-    padding-left: 2.5vw;
-    font-family: Roobert-Regular, 'Montserrat', sans-serif;
+    font-weight: 300;
     letter-spacing: -.02em;
     line-height: 1em;
-    font-weight: 300;
+    cursor: pointer;
+    opacity: 0.95;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    margin: 6vw auto;
+    padding-left: 2vw;
+    margin-top: 0.1vw;
 }
 
-@media screen and (max-width: 64em) {
-    h1 {
-        font-size: 4rem;
-        line-height: 4.5rem;
-        margin: .6rem 0;
-    }
-    
-}
-.section p {
-    padding-left: 3vw; 
+p {
     font-size: 2vw; 
-    font-family: Druk Wide Medium;
-    line-height: 148%;
+    font-family: var(--font-2);
+    line-height: 145%;
     letter-spacing: 0.014em;
+    text-align: justify;
+    margin: 0 1.2em;
+    padding-bottom: 2vw;
 }
-span.wave {
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-    font-size: 3vw;
-}
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 3.8rem;
-        line-height: 4.2rem;
-    }
-    .motto {
-        font-size: 20vw;
-        margin-top: 6.8rem;
-        line-height: 100%;
-        font-weight: 500;
-        margin-bottom: 3rem;
-    }
-    .logo-wrap {
-        top: 72px;
-    }
-    .logo-wrap a {
-        font-size: 4vw;
-    }
-    .header-wrapper {
-        width: 100%;
-        margin-left: 23px;
-    }
-    .section p {
-        margin-top: 2em;
-        font-size: 4vw;
-    }
-    span.wave {
-        font-size: 7.4vw;
-    }
-    .hype-message {
-        padding-left: 7px;
-        margin-top: 0.6em;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 770px) {
-    .motto {
-        line-height: 95%; 
-        }
-    }
 
-
-@keyframes wave-animation {
-    0% { transform: rotate(  0.0deg) }
-    10% { transform: rotate(-10.0deg) }
-    20% { transform: rotate( 12.0deg) }
-    30% { transform: rotate(-10.0deg) }
-    40% { transform: rotate(  9.0deg) }
-    50% { transform: rotate(  0.0deg) }
-    100% { transform: rotate(  0.0deg) }
+.block-revealer__element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	pointer-events: none;
+	opacity: 0;
 }
 
 .theme-color {
     color: var(--primary-color);
 }
 
+.theme-color__background {
+    background-color: var(--primary-color);
+}
+
 a {
-    background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 3px 3px;
-    color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: none;
+    color: #f0f0ff !important;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+p a {
+    color: var(--primary-color) !important;
     text-decoration: none;
 }
 
@@ -198,11 +109,37 @@ a:hover {
     text-decoration: none;
     color: var(--primary-color);
 }
-/* a:hover {
-    color: transparent;
-    -webkit-text-stroke: 2px var(--primary-color);
-} */
 
+span.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    font-size: 3vw;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(  0.0deg) }
+    10% { transform: rotate(-10.0deg) }
+    20% { transform: rotate( 12.0deg) }
+    30% { transform: rotate(-10.0deg) }
+    40% { transform: rotate(  9.0deg) }
+    50% { transform: rotate(  0.0deg) }
+    100% { transform: rotate(  0.0deg) }
+}
+
+.navbar-brand {
+    font-family: var(--font-2);
+    padding: 2em 0;
+    margin-left: 1.8em;
+}
+
+.navbar-brand:hover {
+    background-image: none;
+}
+
+/* custom scrollbar on the right */
 body::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
@@ -248,13 +185,75 @@ body::-webkit-scrollbar-track {
 	}
 }
 
-.block-revealer__element {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #000;
-	pointer-events: none;
-	opacity: 0;
+h3 {
+    font-family: var(--font-2);
+    font-size: 2vw;
+    margin-top: 5em;
+    margin-left: 1.35em;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    p {
+        line-height: 1.2;
+        font-size: 2.5vw;
+    }
+    .sk-intro__header {
+        font-size: 14vw;
+        letter-spacing: -.02em;
+        line-height: 1em;
+        font-weight: 300;  
+        margin-top: 0; 
+    }
+    h3 {
+        font-size: 3vw;
+        margin-top: 6em;
+        margin-left: 1em;
+    }
+    .navbar-brand {
+        margin-left: 1em;
+    }
+    .para-3 {
+        text-align: left;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    p {
+        font-size: 5vw;
+        margin: 0 auto;
+        padding-bottom: 5vw;
+    }
+    .sk-intro__header {
+        font-size: 20vw;
+        margin: 14vw auto;
+        padding-left: 0;
+        margin-top: 5vw;
+    }
+    .para-2, .para-3 {
+        text-align: left;
+    }
+    .navbar-brand {
+        font-size: 5vw;
+        margin-left: 0em;
+    }
+    span.wave {
+        font-size: 7.4vw;
+    }
+    h3 {
+        margin-top: 6.45em;
+        font-size: 5vw;
+        margin-left: 0;
+    }
 }
