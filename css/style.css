@@ -6,7 +6,7 @@
     --duration: 800ms;
     --iterations: 1;
     --font-1: Roobert-Regular, 'Montserrat', sans-serif;;
-    --font-2: Druk Wide Medium;;
+    --font-2: Druk-WideMedium;;
 }
 
 * {
@@ -20,8 +20,8 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
 @font-face {
-    font-family: Druk Wide Medium;
-    src: url(../fonts/Druk\ Wide\ Web\ Medium\ Regular.ttf);
+    font-family: Druk-WideMedium;
+    src: url(../fonts/Druk-WideMedium.ttf);
 }
 
 @font-face {
@@ -58,7 +58,7 @@ body{
 }
 
 p {
-    font-size: 2vw; 
+    font-size: 1.67vw;
     font-family: var(--font-2);
     line-height: 145%;
     letter-spacing: 0.014em;
@@ -99,11 +99,6 @@ a:hover {
 p a {
     color: var(--primary-color) !important;
     text-decoration: none;
-}
-
-.font--1 {
-    font-family: monospace;
-    font-weight: 400;
 }
 
 a:hover {
@@ -239,6 +234,7 @@ h3 {
         font-size: 5vw;
         margin: 0 auto;
         padding-bottom: 5vw;
+        text-align: left;
     }
     .sk-intro__header {
         font-size: 20vw;
