@@ -101,6 +101,11 @@ p a {
     text-decoration: none;
 }
 
+.font--1 {
+    font-family: monospace;
+    font-weight: 800;
+}
+
 a:hover {
     background-image: url("../img/underline.svg");
     background-position: 0 100%;
