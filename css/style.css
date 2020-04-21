@@ -273,15 +273,15 @@ h3 {
         padding-bottom: 5vw;
         text-align: left;
         font-weight: 500;
-        font-size: 8vw;
+        font-size: 6.5vw;
         line-height: 100%;
         letter-spacing: -0.006em;
     }
     .sk-intro__header {
         font-size: 15vw;
-        margin: 14vw auto;
+        margin: 24vw auto;
         padding-left: 0;
-        margin-top: 34vw;
+        margin-top: 43vw;
     }
     .para-2, .para-3 {
         text-align: left;
