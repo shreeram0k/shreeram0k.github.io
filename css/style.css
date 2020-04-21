@@ -301,4 +301,7 @@ h3 {
     .mail {
         font-size: 24px;
     }
+    .fixed-top {
+        left: 5px;
+    }
 }
