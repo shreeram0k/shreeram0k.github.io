@@ -72,16 +72,16 @@ p {
     font-family: var(--font-1);
     padding: 1.375vw 2vw 0 2.53333vw;
     font-weight: 400;
-    font-size: 3.5vw;
+    font-size: 3vw;
     letter-spacing: -.013em;
     line-height: 105%;
 }
 
 h2 {
     font-weight: normal;
-    font-size: 11.25vw;
+    font-size: 9.25vw;
     font-family: oggr;
-    line-height: 11.25vw;
+    line-height: 6.25vw;
     margin-bottom: .8vw;
     padding: 6.5vw 2vw 0 2.53333vw;
 }
