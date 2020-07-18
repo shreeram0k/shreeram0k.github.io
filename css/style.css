@@ -275,7 +275,8 @@ h3 {
         font-weight: 500;
         font-size: 6.5vw;
         line-height: 100%;
-        letter-spacing: -0.006em;
+/*         letter-spacing: -0.006em; */
+	letter-spacing: 0.013em;
     }
     .sk-intro__header {
         font-size: 15vw;
