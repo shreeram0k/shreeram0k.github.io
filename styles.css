@@ -155,6 +155,7 @@ h2 {
 
     .heading {
         font-size: 2em;
+        margin-top: 10%;
     }
 
     h3 {
@@ -177,8 +178,8 @@ h2 {
     }
 
     .square, .circle {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
     }
 
     .traingle {
@@ -216,6 +217,6 @@ h2 {
 
 @media (max-width: 325px) {
     .sec-nav a {
-        font-size: 53%;
+        font-size: 52%;
     }
 }
