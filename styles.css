@@ -173,6 +173,7 @@ h2 {
     .motto {
         font-size: 2em;
         width: 75%;
+        margin-top: 10%;
     }
 
     .square, .circle {
@@ -186,7 +187,7 @@ h2 {
 
     #work {
         font-size: 2rem;
-        margin-top: 1em;
+        margin-top: 10%;
     }
 
     .work {
@@ -195,11 +196,16 @@ h2 {
 
     h2 {
         font-size: 1.3em;
+        margin-bottom: 0;
     }
 
     .col {
         margin-bottom: 1em;
     } 
+
+    .work-mb {
+        margin-bottom: 5%;
+    }
 }
 
 @media (max-width: 375px) {
