@@ -134,7 +134,9 @@ h2 {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-
+    .sec-nav a {
+        font-size: 73%;
+    }
 }
 
 /* Landscape phones and down */
@@ -198,4 +200,16 @@ h2 {
     .col {
         margin-bottom: 1em;
     } 
+}
+
+@media (max-width: 375px) {
+    .sec-nav a {
+        font-size: 62%;
+    }
+}
+
+@media (max-width: 325px) {
+    .sec-nav a {
+        font-size: 53%;
+    }
 }
