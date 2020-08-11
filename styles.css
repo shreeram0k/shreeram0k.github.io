@@ -156,6 +156,7 @@ h2 {
     .heading {
         font-size: 2em;
         margin-top: 10%;
+        margin-bottom: 10%;
     }
 
     h3 {
@@ -175,6 +176,7 @@ h2 {
         font-size: 2em;
         width: 75%;
         margin-top: 10%;
+        padding-left: 6%;
     }
 
     .square, .circle {
@@ -183,7 +185,9 @@ h2 {
     }
 
     .traingle {
-        border-bottom: 25px solid #05A357;
+        border-bottom: 20px solid #05A357;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
     }
 
     #work {
