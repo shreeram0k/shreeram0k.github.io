@@ -215,7 +215,8 @@ h2 {
         font-size: 3rem;
         width: 92%;
         margin-top: 10%;
-        padding-left: 6%;
+        padding: 6% 0% 6% 6%;
+        line-height: 3.5rem;
     }
 
     .square, .circle {
