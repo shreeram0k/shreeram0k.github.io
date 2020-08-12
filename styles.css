@@ -29,9 +29,9 @@ body {
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: 1.25em;
     letter-spacing: 0.03em;
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
 }
 
 .wrapper {
@@ -45,8 +45,7 @@ h3 {
     font-family: sk-bold, Helvetica, sans-serif;
     width: 60%;
     height: 100%;
-    margin-top: 4%;
-    margin-bottom: 2%;
+    margin: 4% 0% 4% 0%;
     padding: 3%;
 }
 
@@ -94,11 +93,11 @@ a:hover {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding-right: 3em;
-    margin-top: 3rem
+    margin-top: 4%;
 }
 
 .wrapper-project {
-    margin: 5% 10% 0% 10%;
+    margin: 0% 10% 0% 10%;
 }
 
 h2 {
