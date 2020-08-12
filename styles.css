@@ -142,7 +142,7 @@ h2 {
 }
 
 .fade-up {
-    animation: fade-up 4s cubic-bezier(.05,.98,.17,.97) forwards;
+    animation: fade-up 6s cubic-bezier(.05,.98,.17,.97) forwards;
 }
 
 .animate-pop-in {
